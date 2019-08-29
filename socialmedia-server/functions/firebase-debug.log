@@ -1,0 +1,105 @@
+[debug] [2019-08-17T18:18:31.422Z] ----------------------------------------------------------------------
+[debug] [2019-08-17T18:18:31.427Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Daniel-Laptop\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions --debug
+[debug] [2019-08-17T18:18:31.428Z] CLI Version:   7.2.2
+[debug] [2019-08-17T18:18:31.428Z] Platform:      win32
+[debug] [2019-08-17T18:18:31.429Z] Node Version:  v10.16.2
+[debug] [2019-08-17T18:18:31.430Z] Time:          Sat Aug 17 2019 14:18:31 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-08-17T18:18:31.431Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-17T18:18:31.441Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-17T18:18:31.443Z] > authorizing via signed-in user
+[debug] [2019-08-17T18:18:31.443Z] [iam] checking project socialape-7d0b6 for permissions ["firebase.projects.get"]
+[debug] [2019-08-17T18:18:31.446Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/socialape-7d0b6:testIamPermissions  
+
+[debug] [2019-08-17T18:18:31.830Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-17T18:18:31.835Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/socialape-7d0b6  
+ 
+[debug] [2019-08-17T18:18:32.101Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[debug] [2019-08-17T18:18:32.117Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/socialape-7d0b6/adminSdkConfig  
+ 
+[debug] [2019-08-17T18:18:32.253Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions" for Cloud Functions...
+[debug] [2019-08-17T18:18:32.956Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions","node_version":"10.16.2"}
+[debug] [2019-08-17T18:18:32.957Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-08-17T18:18:32.960Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-08-17T18:18:32.962Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-08-17T18:18:32.963Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[api]: http function initialized (http://localhost:5000/socialape-7d0b6/us-central1/api).
+[info] i  functions[createNotificationOnLike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[deleteNotificationOnUnLike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[createNotificationOnComment]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[onUserImageChange]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[onScreamDelete]: function ignored because the firestore emulator does not exist or is not running.
+[debug] [2019-08-17T18:24:36.373Z] File C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\util\admin.js changed, reloading triggers
+[debug] [2019-08-17T18:24:37.944Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions","node_version":"10.16.2"}
+[debug] [2019-08-17T18:24:37.945Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-08-17T18:24:37.949Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-08-17T18:24:37.954Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-08-17T18:24:37.957Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+    at FirebaseAppError.FirebaseError [as constructor] (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\utils\error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\utils\error.js:88:28)
+    at new FirebaseAppError (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\utils\error.js:122:28)
+    at FirebaseNamespaceInternals.app (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:101:19)
+    at FirebaseNamespace.app (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:402:30)
+    at FirebaseNamespace.ensureApp (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:418:24)
+    at FirebaseNamespace.fn (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:327:30)
+    at Object.<anonymous> (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\util\admin.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[info] Shutting down...
+[debug] [2019-08-17T18:24:52.308Z] ----------------------------------------------------------------------
+[debug] [2019-08-17T18:24:52.312Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Daniel-Laptop\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions --debug
+[debug] [2019-08-17T18:24:52.313Z] CLI Version:   7.2.2
+[debug] [2019-08-17T18:24:52.314Z] Platform:      win32
+[debug] [2019-08-17T18:24:52.315Z] Node Version:  v10.16.2
+[debug] [2019-08-17T18:24:52.316Z] Time:          Sat Aug 17 2019 14:24:52 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-08-17T18:24:52.317Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-17T18:24:52.325Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-17T18:24:52.327Z] > authorizing via signed-in user
+[debug] [2019-08-17T18:24:52.327Z] [iam] checking project socialape-7d0b6 for permissions ["firebase.projects.get"]
+[debug] [2019-08-17T18:24:52.329Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/socialape-7d0b6:testIamPermissions  
+
+[debug] [2019-08-17T18:24:52.740Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-17T18:24:52.744Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/socialape-7d0b6  
+ 
+[debug] [2019-08-17T18:24:53.012Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[debug] [2019-08-17T18:24:53.028Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/socialape-7d0b6/adminSdkConfig  
+ 
+[debug] [2019-08-17T18:24:53.176Z] <<< HTTP RESPONSE 200
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions" for Cloud Functions...
+[debug] [2019-08-17T18:24:53.872Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions","node_version":"10.16.2"}
+[debug] [2019-08-17T18:24:53.873Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-08-17T18:24:53.876Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-08-17T18:24:53.878Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-08-17T18:24:53.879Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: The default Firebase app does not exist. Make sure you call initializeApp() before using any of the Firebase services.
+    at FirebaseAppError.FirebaseError [as constructor] (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\utils\error.js:42:28)
+    at FirebaseAppError.PrefixedFirebaseError [as constructor] (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\utils\error.js:88:28)
+    at new FirebaseAppError (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\utils\error.js:122:28)
+    at FirebaseNamespaceInternals.app (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:101:19)
+    at FirebaseNamespace.app (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:402:30)
+    at FirebaseNamespace.ensureApp (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:418:24)
+    at FirebaseNamespace.fn (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\node_modules\firebase-admin\lib\firebase-namespace.js:327:30)
+    at Object.<anonymous> (C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\util\admin.js:5:18)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+[warn] !  We were unable to load your functions code. (see above)
+[debug] [2019-08-17T18:25:02.626Z] File C:\Users\Daniel-Laptop\Documents\socialape-functions (new)\functions\util\admin.js changed, reloading triggers
+[debug] [2019-08-17T18:25:04.075Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions","node_version":"10.16.2"}
+[debug] [2019-08-17T18:25:04.076Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-08-17T18:25:04.079Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.3.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-08-17T18:25:04.082Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-08-17T18:25:04.083Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"C:\\Users\\Daniel-Laptop\\Documents\\socialape-functions (new)\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[api]: http function initialized (http://localhost:5000/socialape-7d0b6/us-central1/api).
+[info] i  functions[createNotificationOnLike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[deleteNotificationOnUnLike]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[createNotificationOnComment]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[onUserImageChange]: function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions[onScreamDelete]: function ignored because the firestore emulator does not exist or is not running.
