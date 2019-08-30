@@ -25,11 +25,13 @@ const styles = {
     marginBottom: 20
   },
   image: {
-    minWidth: 200
+    minWidth: 200,
   },
   content: {
     padding: 25,
-    objectFit: 'cover'
+    objectFit: 'cover',
+    whiteSpace: 'pre-line',
+    overflow: "hidden"
   }
 };
 
@@ -65,6 +67,7 @@ class Scream extends Component {
           className={classes.image}
         />
         <CardContent className={classes.content}>
+          {/* User name */}
           <Typography
             variant="h5"
             component={Link}
@@ -72,18 +75,27 @@ class Scream extends Component {
             color="primary"
           >
             {userHandle}
+            {/* Delete btn */}
           </Typography>
           {deleteButton}
+          {/* Date of message */}
           <Typography variant="body2" color="textSecondary">
             {dayjs(createdAt).fromNow()}
           </Typography>
-          <Typography variant="body1">{body}</Typography>
+          {/* Message */}
+          <Typography 
+          variant="body1"
+          >{body}
+          </Typography>
+          {/* Like btn */}
           <LikeButton screamId={screamId} />
           <span>{likeCount} Likes</span>
+          {/* Comments btn */}
           <MyButton tip="Comments">
             <ChatIcon color="primary" />
           </MyButton>
           <span>{commentCount} Comments</span>
+          {/* Expand to view post with comments */}
           <ScreamDialog
             screamId={screamId}
             userHandle={userHandle}
