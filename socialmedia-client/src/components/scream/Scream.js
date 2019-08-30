@@ -25,13 +25,16 @@ const styles = {
     marginBottom: 20
   },
   image: {
-    minWidth: 200,
+    width: 70,
+    height:70,
+    borderRadius: '50%'
   },
   content: {
     padding: 25,
     objectFit: 'cover',
     whiteSpace: 'pre-line',
-    overflow: "hidden"
+    overflow: "hidden",
+    maxWidth: 400
   }
 };
 
