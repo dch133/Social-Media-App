@@ -70,6 +70,8 @@ export default {
       borderRadius: '50%'
     },
     '& .profile-details': {
+      whiteSpace: 'pre-line',
+      overflow: "hidden",
       textAlign: 'center',
       '& span, svg': {
         verticalAlign: 'middle'
