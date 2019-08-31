@@ -25,16 +25,15 @@ const styles = {
     marginBottom: 20
   },
   image: {
-    width: 70,
-    height:70,
-    borderRadius: '50%'
+    width: 100,
+    height:100,
   },
   content: {
     padding: 25,
     objectFit: 'cover',
     whiteSpace: 'pre-line',
     overflow: "hidden",
-    maxWidth: 400
+    maxWidth: 600
   }
 };
 
@@ -62,13 +61,24 @@ class Scream extends Component {
       authenticated && userHandle === handle ? (
         <DeleteScream screamId={screamId} />
       ) : null;
+
+    const profileImageStyle = {
+      height: 100,
+      width: 100,
+      borderRadius: '50%',
+      objectFit: 'cover',
+      marginTop: '30%',
+      marginLeft: '15%'
+    };
+
     return (
       <Card className={classes.card}>
         <CardMedia
-          image={userImage}
+          // image={userImage}
           title="Profile image"
-          className={classes.image}
-        />
+          className={classes.image}>
+             <img src={userImage} alt="" style={profileImageStyle}/>
+        </CardMedia>
         <CardContent className={classes.content}>
           {/* User name */}
           <Typography

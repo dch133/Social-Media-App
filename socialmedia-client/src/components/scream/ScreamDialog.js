@@ -75,6 +75,7 @@ class ScreamDialog extends Component {
     window.history.pushState(null, null, this.state.oldPath);
     this.setState({ open: false });
     this.props.clearErrors();
+    window.location.reload();
   };
 
   render() {
@@ -126,7 +127,7 @@ class ScreamDialog extends Component {
         </Grid>
         <hr className={classes.visibleSeparator} />
         <CommentForm screamId={screamId} />
-        <Comments comments={comments} />
+        <Comments comments={comments} oldPath={this.state.oldPath} />
       </Grid>
     );
     return (
