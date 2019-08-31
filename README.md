@@ -9,3 +9,7 @@ Features:
 - Customize your user profile
 - Image uploads
 - Notifications
+
+Website:
+- Original from Firebase: https://socialape-7d0b6.firebaseapp.com/
+- Github pages: https://dch133.github.io/Social-Media-App/
