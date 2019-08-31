@@ -5,7 +5,7 @@ Implemented backend REST API server with Node.js and Express and cloud functions
 
 Features:
 - Make posts, like them and add comments
-- user login,sign up, and authentication
-- Customise your user profile
+- user login, sign up, and authentication
+- Customize your user profile
 - Image uploads
 - Notifications
