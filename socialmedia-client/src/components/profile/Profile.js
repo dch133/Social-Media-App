@@ -127,7 +127,7 @@ class Profile extends Component {
               component={Link}
               to="/signup"
             >
-              Signup
+              Sign Up
             </Button>
           </div>
         </Paper>
