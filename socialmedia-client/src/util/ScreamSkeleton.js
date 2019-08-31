@@ -20,8 +20,8 @@ const styles = (theme) => ({
     padding: 25
   },
   cover: {
-    minWidth: 200,
-    objectFit: 'cover'
+    width: 100,
+    height:100,
   },
   handle: {
     width: 60,
@@ -49,12 +49,25 @@ const styles = (theme) => ({
   }
 });
 
+const skeletonImageStyle = {
+  height: 100,
+  width: 100,
+  borderRadius: '50%',
+  objectFit: 'cover',
+  marginTop: '30%',
+  marginLeft: '15%'
+};
+
 const ScreamSkeleton = (props) => {
   const { classes } = props;
 
   const content = Array.from({ length: 5 }).map((item, index) => (
     <Card className={classes.card} key={index}>
-      <CardMedia className={classes.cover} image={NoImg} />
+      {/* Skeleton profile picture */}
+      <CardMedia className={classes.cover} >
+      <img src={NoImg} alt='' style={skeletonImageStyle}/>
+        </CardMedia> 
+        {/* Skeleton Post */}
       <CardContent className={classes.cardContent}>
         <div className={classes.handle} />
         <div className={classes.date} />
