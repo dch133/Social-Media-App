@@ -3,6 +3,10 @@ Full stack, fully-featured social media application using React, Firebase, Redux
 
 Implemented backend REST API server with Node.js and Express and cloud functions on Firebase
 
+To log in: make any email you want and password longer than 4 characters
+
+Working Sample Account: userx@email.com, 123456
+
 Features:
 - Make posts, like them and add comments
 - user login, sign up, and authentication
