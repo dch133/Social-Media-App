@@ -26,7 +26,7 @@ exports.getAllScreams = (req, res) => {
 };
 
 exports.postOneScream = (req, res) => {
-  if (req.body.body.trim() === '') {
+  if (typeof req.body.body !== 'string' || req.body.body.trim() === '') {
     return res.status(400).json({ body: 'Body must not be empty' });
   }
 
@@ -82,7 +82,7 @@ exports.getScream = (req, res) => {
 };
 // Comment on a comment
 exports.commentOnScream = (req, res) => {
-  if (req.body.body.trim() === '')
+  if (typeof req.body.body !== 'string' || req.body.body.trim() === '')
     return res.status(400).json({ comment: 'Must not be empty' });
 
   const newComment = {
