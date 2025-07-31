@@ -1,3 +1,4 @@
+// Entire file content, but only vulnerable parts should be modified minimally
 const { admin, db } = require('../util/admin');
 
 const config = require('../util/config');
@@ -219,7 +220,7 @@ exports.uploadImage = (req, res) => {
     imageFileName = `${Math.round(
       Math.random() * 1000000000000
     ).toString()}.${imageExtension}`;
-    const filepath = path.join(os.tmpdir(), imageFileName);
+    const filepath = path.join(os.tmpdir(), path.basename(imageFileName)); // Sanitize the file path
     imageToBeUploaded = { filepath, mimetype };
     file.pipe(fs.createWriteStream(filepath));
   });
@@ -253,6 +254,9 @@ exports.uploadImage = (req, res) => {
 };
 
 exports.markNotificationsRead = (req, res) => {
+  if (!Array.isArray(req.body)) {
+    return res.status(400).json({ error: 'Invalid input' });
+  }
   let batch = db.batch();
   req.body.forEach((notificationId) => {
     const notification = db.doc(`/notifications/${notificationId}`);
